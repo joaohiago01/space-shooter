@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProfileScene.unity
     guid: 6e386ea17918bf44cb479536261759a7
+  - enabled: 1
+    path: Assets/Scenes/Phases/PhaseOne.unity
+    guid: 25676662f9b2f0c4c8f08fc77561293a
   m_configObjects: {}
