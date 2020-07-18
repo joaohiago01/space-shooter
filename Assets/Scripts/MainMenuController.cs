@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -14,5 +15,21 @@ public class MainMenuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void navigateToStartScene() {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void navigateToMapScene() {
+        SceneManager.LoadScene("MapScene");
+    }
+
+    public void navigateToShopScene() {
+        SceneManager.LoadScene("ShopScene");
+    }
+
+    public void navigateToProfileScene() {
+        SceneManager.LoadScene("ProfielScene");
     }
 }
