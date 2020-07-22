@@ -30,7 +30,7 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void navigateToProfileScene() {
-        SceneManager.LoadScene("ProfielScene");
+        SceneManager.LoadScene("ProfileScene");
     }
 
     public void exitGame()
