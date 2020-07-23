@@ -1005,7 +1005,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 533525144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1037903910}
+        m_MethodName: backShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533525144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,14 +1271,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e100cd2d8aaab34b90a00bfd5bb3f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shipSelected: {fileID: 0}
+  idShipSelected: 0
   garageViewObject: {fileID: 1938132344}
   profileViewObject: {fileID: 685683127}
   LevelText: {fileID: 0}
   xpText: {fileID: 0}
+  CrystalText: {fileID: 4568186}
   shipNameTxt: {fileID: 31642471}
   shipImage: {fileID: 1357465121}
   missileNameTxt: {fileID: 1104999567}
   missileImage: {fileID: 1111406414}
+  nextShipButton: {fileID: 1109745022}
+  backShipButton: {fileID: 533525143}
 --- !u!4 &1037903911
 Transform:
   m_ObjectHideFlags: 0
@@ -1518,7 +1534,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1109745023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1037903910}
+        m_MethodName: nextShip
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1109745023
 MonoBehaviour:
   m_ObjectHideFlags: 0

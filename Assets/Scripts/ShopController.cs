@@ -51,4 +51,15 @@ public class ShopController : MonoBehaviour
     {
         crystalTxt.text = gameController.getCrystalPlayer().ToString();
     }
+
+    public void Buy(GameObject ship)
+    {
+        GameObject temp = Instantiate(ship);
+
+        ShipInfo shiptemp = temp.GetComponent<ShipInfo>();
+
+        gameController.Buy(shiptemp);
+
+    }
+
 }
