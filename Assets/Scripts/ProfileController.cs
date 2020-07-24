@@ -24,7 +24,6 @@ public class ProfileController : MonoBehaviour
     [SerializeField]
     private Text CrystalText;
 
-
     [SerializeField]
     private Text shipNameTxt;
     [SerializeField]
@@ -39,8 +38,6 @@ public class ProfileController : MonoBehaviour
     private Button nextShipButton;
     [SerializeField]
     private Button backShipButton;
-
-
     private GameController gameController;
     // Start is called before the first frame update
     void Start()
@@ -49,15 +46,12 @@ public class ProfileController : MonoBehaviour
         CrystalText.text = gameController.getCrystalPlayer().ToString();
         shipSelected = gameController.getCurrentShip();
 
-        if(gameController.getShipsCount() < 2)
+        if (gameController.getShipsCount() < 2)
         {
             nextShipButton.interactable = false;
             backShipButton.interactable = false;
-
         }
-
     }
-
     public void GarageView()
     {
         profileViewObject.SetActive(false);
@@ -69,23 +63,20 @@ public class ProfileController : MonoBehaviour
         garageViewObject.SetActive(false);
         profileViewObject.SetActive(true);
     }
-
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenuScene");
     }
-
     public void UpdateUI()
     {
         shipNameTxt.text = shipSelected.shipName;
         shipImage.sprite = shipSelected.shipSprite;
     }
-  
     public void nextShip(int id)
-    {       
+    {
         idShipSelected += id;
 
-        if((idShipSelected) > gameController.getShipsCount())
+        if ((idShipSelected) > gameController.getShipsCount())
         {
             print(gameController.getShipsCount());
             shipSelected = gameController.getShip(0);
@@ -96,10 +87,7 @@ public class ProfileController : MonoBehaviour
             shipSelected = gameController.getShip(idShipSelected);
             gameController.setCurrentShip(gameController.getShip(idShipSelected));
         }
-
-        
         UpdateUI();
-       
     }
     public void backShip(int id)
     {
@@ -115,10 +103,6 @@ public class ProfileController : MonoBehaviour
             shipSelected = gameController.getShip(idShipSelected);
             gameController.setCurrentShip(gameController.getShip(idShipSelected));
         }
-
-
         UpdateUI();
-
     }
-
 }

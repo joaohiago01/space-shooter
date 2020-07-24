@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443523ccab7f64642bd73be413e75e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalPlayer: 900
+  crystalPlayer: 0
   currentShip: {fileID: 2427254855891624018, guid: 106cc8d9c91fb2b4a97cc1917631c772,
     type: 3}
   shipsPlayer: []

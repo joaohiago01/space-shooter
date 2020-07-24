@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 public class MapContoller : MonoBehaviour
 {
+    void Start()
+    {
 
-    void Start() {
-   
     }
+    void Update()
+    {
 
-    void Update() {
-        
     }
-
-    public void startPhase(string phase) {
+    public void startPhase(string phase)
+    {
         SceneManager.LoadScene(phase);
     }
-
-    public void backMenuScene() {
+    public void backMenuScene()
+    {
         SceneManager.LoadScene("MainMenuScene");
     }
 }

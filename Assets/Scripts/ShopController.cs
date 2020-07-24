@@ -12,39 +12,31 @@ public class ShopController : MonoBehaviour
     private GameObject weaponsObjets;
     [SerializeField]
     private Text crystalTxt;
-
     [SerializeField]
     private GameController gameController;
 
-
     void Start()
     {
-
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         UpdateUI();
-
+    }
+    void Update()
+    {
 
     }
-
-    void Update() {
-        
-    }
-
-
-    public void ExitShop() {
+    public void ExitShop()
+    {
         SceneManager.LoadScene("MainMenuScene");
     }
     public void Ships()
     {
         shipsObjets.SetActive(true);
         weaponsObjets.SetActive(false);
-
     }
     public void Weapons()
     {
         shipsObjets.SetActive(false);
         weaponsObjets.SetActive(true);
-
     }
 
     public void UpdateUI()
