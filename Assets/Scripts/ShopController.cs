@@ -15,9 +15,13 @@ public class ShopController : MonoBehaviour
     [SerializeField]
     private GameController gameController;
 
+    [SerializeField]
+    public List<Button> buttonsShips;
+
     void Start()
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
+        gameController.Interactable();
         UpdateUI();
     }
     void Update()
@@ -46,11 +50,18 @@ public class ShopController : MonoBehaviour
 
     public void Buy(GameObject ship)
     {
-        GameObject temp = Instantiate(ship);
 
-        ShipInfo shiptemp = temp.GetComponent<ShipInfo>();
+        ShipInfo shiptemp = ship.GetComponent<ShipInfo>();
 
         gameController.Buy(shiptemp);
+
+    }
+
+    public void interactableButton(Button button)
+    {
+
+        button.interactable = false;
+
 
     }
 

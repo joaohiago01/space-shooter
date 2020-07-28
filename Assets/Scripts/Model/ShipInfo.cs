@@ -11,6 +11,7 @@ public class ShipInfo : MonoBehaviour
     public float speed;
     public int life;
     public int cost;
+    public string namePrefab;
 
     void Start()
     {

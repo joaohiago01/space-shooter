@@ -45,6 +45,7 @@ public class ProfileController : MonoBehaviour
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         CrystalText.text = gameController.getCrystalPlayer().ToString();
         shipSelected = gameController.getCurrentShip();
+        idShipSelected = gameController.idCurrentShip;
 
         if (gameController.getShipsCount() < 2)
         {
@@ -78,14 +79,16 @@ public class ProfileController : MonoBehaviour
 
         if ((idShipSelected) > gameController.getShipsCount())
         {
-            print(gameController.getShipsCount());
+            
             shipSelected = gameController.getShip(0);
             idShipSelected = 0;
+            gameController.idCurrentShip = 0;
         }
         else
         {
             shipSelected = gameController.getShip(idShipSelected);
             gameController.setCurrentShip(gameController.getShip(idShipSelected));
+            gameController.idCurrentShip = idShipSelected;
         }
         UpdateUI();
     }
