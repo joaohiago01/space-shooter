@@ -8,8 +8,6 @@ public class PlayerData
     [HideInInspector]
     public int crystalPlayer;
 
-    public ShipsData shipsData;
-
     public PlayerData(PlayerInfo playerInfo)
     {
         crystalPlayer = playerInfo.crystalPlayer;

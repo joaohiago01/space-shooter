@@ -7,7 +7,6 @@ public class ShipData
 {
     public string shipNamePrefab;
 
-
     public ShipData(ShipInfo shipInfo)
     {
         shipNamePrefab = shipInfo.namePrefab;

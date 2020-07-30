@@ -7,11 +7,11 @@ public class GameData
 {
     public PlayerData playerData;
 
-    public ShipsData shipsData;
+    public ShipsPlayerData shipsPlayerData;
 
-    public GameData(PlayerData playerData, ShipsData shipsData)
+    public GameData(PlayerData playerData, ShipsPlayerData shipsData)
     {
         this.playerData = playerData;
-        this.shipsData = shipsData;
+        this.shipsPlayerData = shipsData;
     }
 }

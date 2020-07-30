@@ -10,25 +10,16 @@ public class ProfileController : MonoBehaviour
     private ShipInfo shipSelected;
     [SerializeField]
     private int idShipSelected;
-
     [SerializeField]
     private GameObject garageViewObject;
     [SerializeField]
     private GameObject profileViewObject;
-
-    [SerializeField]
-    private Text LevelText;
-    [SerializeField]
-    private Text xpText;
-
     [SerializeField]
     private Text CrystalText;
-
     [SerializeField]
     private Text shipNameTxt;
     [SerializeField]
     private Image shipImage;
-
     [SerializeField]
     private Text missileNameTxt;
     [SerializeField]
@@ -79,7 +70,7 @@ public class ProfileController : MonoBehaviour
 
         if ((idShipSelected) > gameController.getShipsCount())
         {
-            
+
             shipSelected = gameController.getShip(0);
             idShipSelected = 0;
             gameController.idCurrentShip = 0;

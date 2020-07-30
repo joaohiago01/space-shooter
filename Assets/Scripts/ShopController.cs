@@ -21,7 +21,7 @@ public class ShopController : MonoBehaviour
     void Start()
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
-        gameController.Interactable();
+        gameController.Interactable(this);
         UpdateUI();
     }
     void Update()
@@ -50,19 +50,7 @@ public class ShopController : MonoBehaviour
 
     public void Buy(GameObject ship)
     {
-
-        ShipInfo shiptemp = ship.GetComponent<ShipInfo>();
-
-        gameController.Buy(shiptemp);
-
+        ShipInfo shipInfo = ship.GetComponent<ShipInfo>();
+        gameController.Buy(shipInfo);
     }
-
-    public void interactableButton(Button button)
-    {
-
-        button.interactable = false;
-
-
-    }
-
 }

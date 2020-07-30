@@ -9,61 +9,49 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private ShipInfo currentShip;
     [SerializeField]
-    private List<ShipInfo> shipsPlayer;   
-    private GameData data;
+    private List<ShipInfo> shipsPlayer;
     [SerializeField]
     private List<ShipInfo> shipPrefabs;
-    [SerializeField]
-    private List<string> shipsPrefabsNames;
-
+    private GameData gameData;
     public int idCurrentShip;
     [SerializeField]
     private PlayerInfo playerInfo;
-    private ShopController shopController;
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-
-
-
     }
     // Start is called before the first frame update
     void Start()
     {
         playerInfo = FindObjectOfType(typeof(PlayerInfo)) as PlayerInfo;
-        shopController = FindObjectOfType(typeof(ShopController)) as ShopController;
 
-        data = SaveSystem.LoadPlayer();
-        if (data == null)
+        gameData = SaveSystem.LoadPlayer();
+
+        if (gameData == null)
         {
-            
+            Debug.Log(playerInfo);
             currentShip = Instantiate(Resources.Load("Ship 1", typeof(ShipInfo))) as ShipInfo;
-
             playerInfo.crystalPlayer = 10000;
 
-            SaveSystem.SavePlayer(playerInfo, new ShipsData(new ShipData(currentShip)));
-            //data = SaveSystem.LoadPlayer();
+            SaveSystem.SavePlayer(playerInfo, new ShipsPlayerData(new ShipData(currentShip)));
         }
-        crystalPlayer = data.playerData.crystalPlayer;
-        
-        shipsPlayer = GetShipsData(data.shipsData);
-        currentShip = shipsPlayer[0];
-              
-    }
 
+        crystalPlayer = gameData.playerData.crystalPlayer;
+        loadShipsPlayer(gameData.shipsPlayerData);
+        currentShip = shipsPlayer[0];
+    }
     // Update is called once per frame
     void Update()
     {
 
     }
-    public void Interactable()
+    public void Interactable(ShopController shopController)
     {
-
-        foreach (ShipData ship in data.shipsData.ships)
+        foreach (ShipData ship in gameData.shipsPlayerData.shipsPlayer)
         {
-            switch (ship.shipNamePrefab) {
-
+            switch (ship.shipNamePrefab)
+            {
                 case "Ship 1":
                     shopController.buttonsShips[0].interactable = false;
                     break;
@@ -84,10 +72,9 @@ public class GameController : MonoBehaviour
     {
         return crystalPlayer;
     }
-
     public ShipInfo getShip(int id)
     {
-        if (id > shipsPlayer.Count)
+        if (id >= shipsPlayer.Count)
         {
             return shipsPlayer[0];
         }
@@ -102,12 +89,10 @@ public class GameController : MonoBehaviour
     {
         currentShip = ship;
     }
-
     public int getShipsCount()
     {
         return shipsPlayer.Count;
     }
-
     public bool Buy(ShipInfo ship)
     {
         if (crystalPlayer < ship.cost)
@@ -115,44 +100,27 @@ public class GameController : MonoBehaviour
             return false;
         }
 
-
         crystalPlayer -= ship.cost;
-        shipsPrefabsNames.Add(ship.namePrefab);
-
         playerInfo.crystalPlayer = crystalPlayer;
-        
-   
-        crystalPlayer = data.playerData.crystalPlayer;
 
-        ShipInfo x = Resources.Load(ship.namePrefab, typeof(ShipInfo)) as ShipInfo;
+        ShipInfo instance = Resources.Load(ship.namePrefab, typeof(ShipInfo)) as ShipInfo;
+        ShipInfo shipBuyInfo = Instantiate(instance);
+        shipsPlayer.Add(shipBuyInfo);
 
-        ShipInfo temp = Instantiate(x);
+        ShipsPlayerData shipsPlayerData = gameData.shipsPlayerData;
+        shipsPlayerData.shipsPlayer.Add(new ShipData(shipBuyInfo));
 
-        shipsPlayer.Add(temp);
-
-        ShipsData shipsData = data.shipsData;
-
-        shipsData.ships.Add(new ShipData(temp));
-
-        SaveSystem.SavePlayer(playerInfo, shipsData);
-        //shipsPlayer.Add(ship);
+        SaveSystem.SavePlayer(playerInfo, shipsPlayerData);
+        crystalPlayer = playerInfo.crystalPlayer;
 
         return true;
     }
-
-    private List<ShipInfo> GetShipsData(ShipsData shipsData)
+    private void loadShipsPlayer(ShipsPlayerData shipsData)
     {
-        List<ShipInfo> shipInfos = new List<ShipInfo>();
-   
-        foreach(ShipData ship in data.shipsData.ships)
+        foreach (ShipData ship in gameData.shipsPlayerData.shipsPlayer)
         {
-           
             ShipInfo instance = Instantiate(Resources.Load(ship.shipNamePrefab, typeof(ShipInfo))) as ShipInfo;
-            shipInfos.Add(instance);
+            shipsPlayer.Add(instance);
         }
-        
-        return shipInfos;
     }
-
-   
 }

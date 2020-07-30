@@ -154,6 +154,10 @@ MonoBehaviour:
   weaponsObjets: {fileID: 1529601197}
   crystalTxt: {fileID: 403751564}
   gameController: {fileID: 0}
+  buttonsShips:
+  - {fileID: 1120650809}
+  - {fileID: 1677519374}
+  - {fileID: 327599637}
 --- !u!4 &34896752
 Transform:
   m_ObjectHideFlags: 0
@@ -2205,7 +2209,7 @@ GameObject:
   - component: {fileID: 1151767081}
   - component: {fileID: 1151767080}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: ImageShip1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2712,7 +2716,7 @@ GameObject:
   - component: {fileID: 1644852713}
   - component: {fileID: 1644852712}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageShip3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2733,7 +2737,7 @@ RectTransform:
   - {fileID: 327599636}
   - {fileID: 1454218874}
   m_Father: {fileID: 2023492044}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3444,7 +3448,7 @@ GameObject:
   - component: {fileID: 1988682288}
   - component: {fileID: 1988682287}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: ImageShip2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3465,7 +3469,7 @@ RectTransform:
   - {fileID: 1677519373}
   - {fileID: 1200654822}
   m_Father: {fileID: 2023492044}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3666,8 +3670,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151767079}
-  - {fileID: 1644852711}
   - {fileID: 1988682286}
+  - {fileID: 1644852711}
   m_Father: {fileID: 1308725388}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

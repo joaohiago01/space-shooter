@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -69,7 +69,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: 4 Split
+  m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 707, y: 492}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 29049
+  controlID: 208
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 614
     height: 635
-  m_MinSize: {x: 201, y: 342}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 200, y: 321}
+  m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 29008
+  controlID: 280
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 29050
+  controlID: 188
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 521.60034, y: 969.3432, z: -484.8317}
+    m_Target: {x: 598.03094, y: 949.81476, z: -455.25}
     speed: 2
-    m_Value: {x: 521.60034, y: 969.3432, z: -484.8317}
+    m_Value: {x: 598.03094, y: 949.81476, z: -455.25}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -478,9 +478,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 901.8883
+    m_Target: 1352.3712
     speed: 2
-    m_Value: 901.8883
+    m_Value: 1352.3712
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c070100
-      m_LastClickedID: 67452
-      m_ExpandedIDs: a88dffffec91ffff1e93ffff2894ffff1295ffff2e95ffff7497ffffa09affff8ea0fffffca0ffff1ea2ffffeca8ffff60a9ffff0eaaffff9caefffff4b5ffff74b6ffff8ab8ffff98b8ffffb4bcffffbcbfffff10ccffffaeccffff78ceffff5cd2ffffb0d2ffffced6ffff1cd8ffff5ad8ffffd4d8ffff22e6ffff5ce7ffffb0ebffff30edffff6aedffffb6edffffe6eefffff8eeffff06efffff14efffff22efffff42efffff50efffff68efffffe0f3ffffcaf8fffff4ffffff7a54000092540000226d0000a06f0000b86f0000f47000000c7100002c7b0000447b0000f68500000e860000108d000028a0000072a600008aa60000ccaa00002aab000024b800003cb80000d2c80000eac8000080cb000086d80000d4d8000032d9000044d90000bcda00001adb000012ee00002aee000034f4000084fb000006fc0000e0fd000076060100c4060100
+      m_SelectedIDs: c6720000
+      m_LastClickedID: 29382
+      m_ExpandedIDs: 5ce3ffff5ee5ffff74e5ffff38e9ffff58edffff0af2fffff0f8fffff4ffffff8639000074700000b2700000c2700000e67000002071000032710000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -628,17 +628,16 @@ MonoBehaviour:
     - Assets/Scenes
   m_ViewMode: 0
   m_StartGridSize: 64
-  m_LastFolders:
-  - Assets
+  m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\torga\Desktop\Arquivos\Projetos\Projetos Unity\space-shooter
+  m_LastProjectPath: C:\Users\hiago\Desktop\Projects\space-shooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: cc390000
     m_LastClickedID: 14796
-    m_ExpandedIDs: ffffffff00000000cc390000d0390000d2390000d4390000de390000e039000000ca9a3b
+    m_ExpandedIDs: ffffffff00000000ec390000ee390000f0390000f2390000f4390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -663,10 +662,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 19}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000cc390000d0390000d2390000d4390000de39000000ca9a3b
+    m_ExpandedIDs: ffffffff00000000ec390000ee390000f0390000f2390000f43900001e3a0000203a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
